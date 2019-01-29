@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>ToDo List - JS</title>
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Simple ToDo List</h1>
+      <div class="addATask">
+        <input type="text" id="inputvalue" />
+        <button class="add" onclick="todolist()">Add Item</button>
+        <ul>
+          <li>
+            <span class="valueExist" id="valueExist">Value Already Exist</span>
+          </li>
+          <li>
+            <span class="enterValue" id="enterValue">
+              Please enter the Value
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="tasks">
+        <div class="addedTask">
+          <h3>Added Task</h3>
+          <ul id="myList"></ul>
+        </div>
+        <div class="completedTask">
+          <h3>Completed Task</h3>
+          <ul id="newMyList"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

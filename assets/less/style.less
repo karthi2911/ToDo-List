@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+ol,
+ul {
+  padding: 0;
+}
+body {
+  background-color: #f1f1f1;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 750px;
+  width: 100%;
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.addATask {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  input {
+    width: 74%;
+    padding: 8px 2%;
+    font-size: 15px;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    width: 24%;
+    border: 1px solid #2e6da4;
+    background-color: #337ab7;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    li {
+      display: block;
+    }
+  }
+  .valueExist,
+  .enterValue {
+    display: none;
+    color: red;
+    font-weight: normal;
+  }
+}
+.addedTask,
+.completedTask {
+  margin-bottom: 20px;
+  width: 48%;
+  border: 1px solid #dddddd;
+  padding: 10px 2.5%;
+  background-color: #fff;
+  h3 {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      line-height: 24px;
+      font-size: 18px;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+.tasks {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.completedTask {
+  overflow: hidden;
+  button {
+    background-color: #d9534f;
+    border: 1px solid #d43f3a;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 12px;
+    text-align: center;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+}
+.delete {
+  float: right;
+}
+#myList {
+  li {
+    cursor: pointer;
+  }
+}
