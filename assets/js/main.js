@@ -5,14 +5,13 @@ function todolist() {
   li.className = "list";
   var ul = document.getElementById("myList");
   var textnode = document.createTextNode(result);
+  appendData();
 
   var Exist = document.getElementById("valueExist");
   var addvalue = document.getElementById("enterValue");
 
-  var textli = document.getElementsByTagName("li");
-
-  for (var i = 0; i < textli.length; i++) {
-    var resultli = textli[i].innerHTML;
+  for (var i = 0; i < li.length; i++) {
+    var resultli = li[i].innerHTML;
     if (result.toUpperCase() === resultli.toUpperCase()) {
       Exist.style.display = "block";
       return;
@@ -25,11 +24,10 @@ function todolist() {
     addvalue.style.display = "block";
     return;
   } else {
-    appendData();
+    //appendData();
     addvalue.style.display = "none";
   }
-  appendData();
-
+   
   function appendData() {
     li.appendChild(textnode);
     ul.appendChild(li);
@@ -52,9 +50,9 @@ ulclick.onclick = function(event) {
   /* */
   var anchors = document.querySelectorAll(".delete");
   for (var i = 0; i < anchors.length; i++) {
-    console.log(anchors);
+    //console.log(anchors);
     anchors[i].addEventListener("click", function() {
-      console.log(this.parentElement.className);
+      //console.log(this.parentElement.className);
       this.parentElement.remove();
     });
   }
